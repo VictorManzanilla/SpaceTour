@@ -1,0 +1,23 @@
+/*********************Tag selectors**********************************/
+body {
+    background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
+    color: #ffff;
+}
+
+
+/*********************Class Selectors**********************************/
+ul.nav {
+   margin-left: 530px;
+    background-color: #979797;
+    text-align: center;
+    width: 830px;
+    height: 96px;
+  }
+
+  ul.nav > li {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+/* .nav {
+    display: inline-block;
+} */
