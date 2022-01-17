@@ -2,22 +2,64 @@
 body {
     background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
     color: #ffff;
+    margin: 40px auto auto 55px;
+}
+
+a {
+  text-decoration: none;
+  color:#ffff;
+  font-family: Barlow Condensed;
+  font-size: 16px;
+  margin: 10px 20px;
+  
+}
+
+/*********************Class Selectors**********************************/
+
+
+.home-top {
+  width: 1385px;
+  
+}
+.oval {
+  position: absolute;
+width: 48px;
+height: 48px;
+left: 55px;
+top: 64px;
+border-radius: 50%;
+background: #FFFFFF;
 }
 
 
-/*********************Class Selectors**********************************/
-ul.nav {
-   margin-left: 530px;
-    background-color: #979797;
-    text-align: center;
-    width: 830px;
-    height: 96px;
-  }
 
-  ul.nav > li {
-    display: inline-block;
-    padding: 10px 20px;
-  }
-/* .nav {
-    display: inline-block;
-} */
+
+
+.bar {
+  position: absolute;
+width: 473px;
+height: 1px;
+left: 167px;
+top: 88px;
+background: #FFFFFF;
+mix-blend-mode: normal;
+opacity: 0.25;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.04);;
+  display: inline-block;
+  width: 830px;
+  height: 96px;
+  position: relative;
+  left: 555px;
+  text-align: center;
+  backdrop-filter: blur(81.5485px);
+}
+
+.nav{
+  padding-top: 30px;
+  padding-left: 123px;
+  width: 542px;
+  height: 19px;
+}
