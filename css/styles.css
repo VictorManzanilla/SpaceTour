@@ -169,3 +169,23 @@ letter-spacing: 2px;
 color: #0B0D17;
 
 }
+
+.destination-background-image{
+  background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/destination/background-destination-desktop.jpg);
+}
+
+.destination-moon {
+  position: absolute;
+width: 382px;
+height: 34px;
+left: 166.5px;
+top: 212px;
+}
+
+.moon-picture {
+  position: absolute;
+width: 445px;
+height: 445px;
+left: 230px;
+top: 343px;
+}
