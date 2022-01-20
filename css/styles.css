@@ -174,6 +174,49 @@ color: #0B0D17;
   background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/destination/background-destination-desktop.jpg);
 }
 
+.moon-01 {
+  position: absolute;
+height: 34px;
+left: 0%;
+right: 93.19%;
+top: calc(50% - 34px/2);
+
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 34px;
+/* identical to box height */
+
+letter-spacing: 4.725px;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+opacity: 0.25;
+}
+
+.moon-pick {
+  position: absolute;
+height: 34px;
+left: 14.14%;
+right: 1.57%;
+top: calc(50% - 34px/2);
+
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 34px;
+/* identical to box height */
+
+letter-spacing: 4.725px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
 .destination-moon {
   position: absolute;
 width: 382px;
@@ -188,4 +231,163 @@ width: 445px;
 height: 445px;
 left: 230px;
 top: 343px;
+}
+
+.moon-description-box {
+  position: absolute;
+width: 445px;
+height: 472px;
+left: 832px;
+top: 310px;
+}
+
+.moon-description-subnav {
+  position: absolute;
+left: 0%;
+right: 35.84%;
+top: 0%;
+bottom: 92.8%;
+}
+
+.moon-moon {
+  position: absolute;
+height: 19px;
+left: 0.18%;
+right: 86.16%;
+top: calc(50% - 19px/2 - 7.5px);
+
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 2.7px;
+
+color: #FFFFFF;
+}
+
+.moon-mars {
+  position: absolute;
+height: 19px;
+left: 26.09%;
+right: 60.95%;
+top: calc(50% - 19px/2 - 7.5px);
+
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 2.7px;
+
+color: #D0D6F9;
+
+}
+
+.moon-europa {
+  position: absolute;
+height: 19px;
+left: 51.66%;
+right: 28.72%;
+top: calc(50% - 19px/2 - 7.5px);
+
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 2.7px;
+
+color: #D0D6F9;
+}
+
+.moon-titan {
+  position: absolute;
+height: 19px;
+left: 83.89%;
+right: 1.4%;
+top: calc(50% - 19px/2 - 7.5px);
+
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 2.7px;
+
+color: #D0D6F9;
+
+}
+
+.moon-description-subnav-rectangle {
+  position: absolute;
+left: 0%;
+right: 85.64%;
+top: 91.18%;
+bottom: 0%;
+
+background: #FFFFFF;
+}
+
+.moon-title {
+  position: absolute;
+height: 115px;
+left: 0.11%;
+right: 25.06%;
+top: calc(50% - 115px/2 - 107.5px);
+
+font-family: Bellefair;
+font-style: normal;
+font-weight: normal;
+font-size: 100px;
+line-height: 115px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+
+.moon-description {
+  position: absolute;
+height: 128px;
+left: 0%;
+right: 0.22%;
+top: calc(50% - 128px/2 + 28px);
+
+font-family: Barlow;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 32px;
+/* or 178% */
+
+
+color: #D0D6F9;
+}
+
+.moon-description-long-rectangle {
+  position: absolute;
+left: 0.22%;
+right: 0%;
+top: 80.93%;
+bottom: 18.86%;
+
+background: #383B4B;
+}
+
+.moon-distance {
+  position: absolute;
+left: 0.11%;
+right: 67.75%;
+top: 87.08%;
+bottom: 0%;
+}
+
+.moon-time {
+  position: absolute;
+left: 50%;
+right: 22.58%;
+top: 87.08%;
+bottom: 0%;
+
 }
