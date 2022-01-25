@@ -174,7 +174,7 @@ color: #0B0D17;
   background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/destination/background-destination-desktop.jpg);
 }
 
-.moon-01 {
+.number-01 {
   position: absolute;
 height: 34px;
 left: 0%;
@@ -196,7 +196,7 @@ mix-blend-mode: normal;
 opacity: 0.25;
 }
 
-.moon-pick {
+.pick {
   position: absolute;
 height: 34px;
 left: 14.14%;
@@ -217,7 +217,7 @@ color: #FFFFFF;
 
 }
 
-.destination-moon {
+.destination {
   position: absolute;
 width: 382px;
 height: 34px;
@@ -225,7 +225,7 @@ left: 166.5px;
 top: 212px;
 }
 
-.moon-picture {
+.satellite-picture {
   position: absolute;
 width: 445px;
 height: 445px;
@@ -233,7 +233,7 @@ left: 230px;
 top: 343px;
 }
 
-.moon-description-box {
+.description-box {
   position: absolute;
 width: 445px;
 height: 472px;
@@ -241,7 +241,7 @@ left: 832px;
 top: 310px;
 }
 
-.moon-description-subnav {
+.description-subnav {
   position: absolute;
 left: 0%;
 right: 35.84%;
@@ -249,7 +249,7 @@ top: 0%;
 bottom: 92.8%;
 }
 
-.moon-moon {
+.moon {
   position: absolute;
 height: 19px;
 left: 0.18%;
@@ -266,7 +266,7 @@ letter-spacing: 2.7px;
 color: #FFFFFF;
 }
 
-.moon-mars {
+.mars {
   position: absolute;
 height: 19px;
 left: 26.09%;
@@ -284,7 +284,7 @@ color: #D0D6F9;
 
 }
 
-.moon-europa {
+.europa {
   position: absolute;
 height: 19px;
 left: 51.66%;
@@ -301,7 +301,7 @@ letter-spacing: 2.7px;
 color: #D0D6F9;
 }
 
-.moon-titan {
+.titan {
   position: absolute;
 height: 19px;
 left: 83.89%;
@@ -329,7 +329,7 @@ bottom: 0%;
 background: #FFFFFF;
 }
 
-.moon-title {
+.satellite-title {
   position: absolute;
 height: 115px;
 left: 0.11%;
@@ -347,7 +347,7 @@ line-height: 115px;
 color: #FFFFFF;
 }
 
-.moon-description {
+.satellite-description {
   position: absolute;
 height: 128px;
 left: 0%;
@@ -365,7 +365,7 @@ line-height: 32px;
 color: #D0D6F9;
 }
 
-.moon-description-long-rectangle {
+.description-long-rectangle {
   position: absolute;
 left: 0.22%;
 right: 0%;
@@ -375,7 +375,7 @@ bottom: 18.86%;
 background: #383B4B;
 }
 
-.moon-distance {
+.distance {
   position: absolute;
 left: 0.11%;
 right: 67.75%;
@@ -383,7 +383,7 @@ top: 87.08%;
 bottom: 0%;
 }
 
-.moon-time {
+.time {
   position: absolute;
 left: 50%;
 right: 22.58%;
