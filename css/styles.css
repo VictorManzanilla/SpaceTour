@@ -22,7 +22,11 @@ letter-spacing: 2.7px;
 
 
 .home-top {
-  width: 1385px;
+  position: absolute;
+width: 1385px;
+height: 96px;
+left: 55px;
+top: 40px;
   
 }
 .oval {
@@ -172,6 +176,8 @@ color: #0B0D17;
 
 .destination-background-image{
   background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/destination/background-destination-desktop.jpg);
+  
+
 }
 
 .number-01 {
@@ -390,4 +396,109 @@ right: 22.58%;
 top: 87.08%;
 bottom: 0%;
 
+}
+
+/******************** people pages css *************************************/
+
+.people-background-image {
+  background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/crew/background-crew-desktop.jpg);
+  position: absolute;
+  width: 1440px;
+  height: 900px;
+  left: 0px;
+  top: 0px;
+
+}
+
+.subheadline {
+  position: absolute;
+width: 286px;
+height: 34px;
+left: 166.5px;
+top: 212px;
+
+}
+
+.people-title {
+  position: absolute;
+width: 214px;
+height: 37px;
+left: 165.5px;
+top: 400px;
+
+font-family: Bellefair;
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 37px;
+/* identical to box height */
+
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+opacity: 0.5;
+}
+
+.people-name {
+  position: absolute;
+width: 488px;
+height: 64px;
+left: 165.5px;
+top: 452px;
+
+font-family: Bellefair;
+font-style: normal;
+font-weight: normal;
+font-size: 56px;
+line-height: 64px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.people-description {
+  position: absolute;
+width: 444px;
+height: 128px;
+left: 165px;
+top: 543px;
+
+font-family: Barlow;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 32px;
+/* or 178% */
+
+
+color: #D0D6F9;
+}
+
+.footer-oval-block {
+  position: absolute;
+width: 132px;
+height: 15px;
+left: 167px;
+top: 791px;
+
+}
+
+.oval1 {
+  position: absolute;
+width: 15px;
+height: 15px;
+left: 167px;
+top: 791px;
+
+background: #FFFFFF;
+}
+
+.person-picture {
+  position: absolute;
+width: 568.07px;
+height: 712px;
+left: 734.93px;
+top: 198px;
 }
