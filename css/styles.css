@@ -1,8 +1,8 @@
 /*********************Tag selectors**********************************/
-body {
+body.home-img {
     background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
     color: #ffff;
-    margin: 40px auto auto 55px;
+    
 }
 
 a {
@@ -174,10 +174,8 @@ color: #0B0D17;
 
 }
 
-.destination-background-image{
+body.destination-background-image {
   background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/destination/background-destination-desktop.jpg);
-  
-
 }
 
 .number-01 {
@@ -403,10 +401,12 @@ bottom: 0%;
 .people-background-image {
   background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/crew/background-crew-desktop.jpg);
   position: absolute;
-  width: 1440px;
-  height: 900px;
-  left: 0px;
-  top: 0px;
+  width: 1655.31px;
+height: 931px;
+left: -0.23px;
+top: -31px;
+
+ 
 
 }
 
