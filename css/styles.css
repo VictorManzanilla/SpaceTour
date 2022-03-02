@@ -1,6 +1,6 @@
 /*********************Tag selectors**********************************/
 body.home-img {
-    background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
+    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
     color: #ffff;
     
 }
@@ -34,7 +34,7 @@ top: 40px;
 width: 48px;
 height: 48px;
 left: 55px;
-top: 64px;
+top: 30px;
 border-radius: 50%;
 background: #FFFFFF;
 }
@@ -48,7 +48,7 @@ background: #FFFFFF;
 width: 473px;
 height: 1px;
 left: 167px;
-top: 88px;
+top: 48px;
 background: #FFFFFF;
 mix-blend-mode: normal;
 opacity: 0.25;
@@ -175,7 +175,7 @@ color: #0B0D17;
 }
 
 body.destination-background-image {
-  background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/destination/background-destination-desktop.jpg);
+  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/destination/background-destination-desktop.jpg);
 }
 
 .number-01 {
@@ -398,15 +398,12 @@ bottom: 0%;
 
 /******************** people pages css *************************************/
 
-.people-background-image {
-  background-image: url(/Users/baguetteboi/Downloads/space-tourism-website-main/space-code/assets/crew/background-crew-desktop.jpg);
+body.crew-background-image {
+  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/crew/background-crew-desktop.jpg);
   position: absolute;
-  width: 1655.31px;
-height: 931px;
-left: -0.23px;
-top: -31px;
-
  
+  left: -7px;
+  top: -31px;
 
 }
 
@@ -421,7 +418,7 @@ top: 212px;
 
 .people-title {
   position: absolute;
-width: 214px;
+width: 320px;
 height: 37px;
 left: 165.5px;
 top: 400px;
@@ -443,7 +440,7 @@ opacity: 0.5;
 
 .people-name {
   position: absolute;
-width: 488px;
+width: 600px;
 height: 64px;
 left: 165.5px;
 top: 452px;
@@ -451,7 +448,7 @@ top: 452px;
 font-family: Bellefair;
 font-style: normal;
 font-weight: normal;
-font-size: 56px;
+font-size: 50px;
 line-height: 64px;
 text-transform: uppercase;
 
@@ -501,4 +498,10 @@ width: 568.07px;
 height: 712px;
 left: 734.93px;
 top: 198px;
+}
+
+/******************************************* Tech page style *******************************************/
+
+body.tech-background-image {
+  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/technology/background-technology-desktop.jpg);
 }
