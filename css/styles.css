@@ -82,10 +82,10 @@ background: #FFFFFF;
 
 .home-message {
   position: absolute;
-width: 450px;
-height: 382px;
+width: 550px;
+height: 470px;
 left: 165px;
-top: 387px;
+top: 280px;
 }
 
 .home-h5 {
@@ -509,8 +509,6 @@ body.tech-background-image {
 
 .number-position {
   position: absolute;
-width: 80px;
-height: 80px;
 left: 80px;
 top: 383px;
 }
