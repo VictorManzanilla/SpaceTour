@@ -1,7 +1,14 @@
 /*********************Tag selectors**********************************/
 body.home-img {
     background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
+    background-size: cover;
     color: #ffff;
+    height: 900px;
+width: 1440px;
+left: -3185px;
+top: -2989px;
+border-radius: 0px;
+
     
 }
 
@@ -33,7 +40,7 @@ top: 40px;
   position: absolute;
 width: 48px;
 height: 48px;
-left: 55px;
+left: 15px;
 top: 30px;
 border-radius: 50%;
 background: #FFFFFF;
@@ -52,6 +59,7 @@ top: 48px;
 background: #FFFFFF;
 mix-blend-mode: normal;
 opacity: 0.25;
+z-index: 1;
 }
 
 .navbar {
@@ -112,7 +120,7 @@ color: #D0D6F9;
 height: 172px;
 left: 0%;
 right: 1.11%;
-top: calc(50% - 172px/2 - 47px);
+top: 50px;
 
 font-family: Bellefair;
 font-style: normal;
@@ -155,18 +163,17 @@ background: #FFFFFF;
 }
 
 .home-explore {
-  position: absolute;
+position: absolute;
 height: 37px;
 left: 22.63%;
 right: 23.36%;
-top: calc(50% - 37px/2 + 0.5px);
+top: 2em;
 
 font-family: Bellefair;
 font-style: normal;
 font-weight: normal;
 font-size: 32px;
 line-height: 37px;
-/* identical to box height */
 
 letter-spacing: 2px;
 
