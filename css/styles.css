@@ -1,5 +1,106 @@
+/*********************custom properties**********************************/
+
+:root {
+  /* colors */
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+  
+  /* font-sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+  
+  /* font-families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+}
+
+.ff-serif { font-family: var(--ff-serif); } 
+.uppercase { text-transform: uppercase; }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/******testing*****/
+
+.primary-navigation {
+  --gap: 2rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
+.underline-indicators > * {
+  cursor: pointer;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  color: hsl( var(--clr-white) / 1);
+  border-color: hsl( var(--clr-white) / 1); 
+}
+
+
+
 /*********************Tag selectors**********************************/
-body.home-img {
+.home-img {
     background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
     background-size: cover;
     color: #ffff;
@@ -24,6 +125,25 @@ line-height: 19px;
 letter-spacing: 2.7px;
   
 }
+
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+/******************** components *************************************/
+
+
+.large-button {
+  display: grid;
+  padding: 0 2em;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
 
 /*********************Class Selectors**********************************/
 
@@ -600,3 +720,4 @@ color: #0B0D17;
   left: 820px;
   top: 198px;
 }
+

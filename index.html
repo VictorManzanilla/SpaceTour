@@ -4,33 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="./css/styles.css">
   
   <title>🪐Space tourism website</title>
 </head>
 <body class="home-img">
+  <header class="primary-header">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+    </div>
   <section class="home-top">
     
-    <div class="oval"></div>
+    
     <div class="bar"></div>
     <div class="navbar">
       <div class="small-rectangle"></div>
-      <div class="nav">
+
+      <nav>
+        <ul class="primary-navigation underline-indicators flex">
+            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span>00</span>Home</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination-moon.html"><span>01</span>Destination</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew-commander.html"><span>02</span>Crew</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology-capsule.html"><span>03</span>Technology</a>
+        </ul>
+    </nav>
+
+
+
+      <!-- <div class="nav">
         <span>
           <a href="index.html">00 Home</a>
           <a href="destination-moon.html">01 Destination</a>
           <a href="crew-commander.html">02 Crew</a>
           <a href="technology-capsule.html">03 Technology</a>
       </span>
-      </div>
+      </div> -->
       
     </div>
   </section>
-  
+  </header>
 
  
-  
 <div class="home-message" >
   <h5 class="home-h5">So, you want to travel to</h5>
   <h1 class="home-h1">Space</h1>
@@ -39,8 +59,12 @@
     because we’ll give you a truly out of this world experience!
   </h6>
 </div>
-  <div class="home-explore-shape">
-    <h4 class="home-explore">Explore</h4>
+<div class="flex">
+  <div>
+    <a href="#" class=home-explore-shape>
+      Explore
+    </a>
+    <!-- <h4 class="home-explore">Explore</h4> -->
 
   </div>
 
