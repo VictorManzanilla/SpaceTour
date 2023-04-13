@@ -7,7 +7,7 @@
   --clr-white: 0 0% 100%;
   
   /* font-sizes */
-  --fs-900: 9.375rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 6.25rem;
   --fs-700: 3.5rem;
   --fs-600: 2rem;
@@ -66,7 +66,27 @@
 .fs-600 {
     line-height: 1.1;
 }
+@media (min-width: 35em) {
+  :root {
+      --fs-800: 5rem;
+      --fs-700: 2.5rem;
+      --fs-600: 1.5rem;
+      --fs-400: 1rem;
+  }
+}
 
+@media (min-width: 45em) {
+  :root {
+      /* font-sizes */
+      --fs-800: 6.25rem;
+      --fs-700: 3.5rem;
+      --fs-600: 2rem;
+      --fs-400: 1.125rem;
+  }
+}
+ .display-block {
+  display: block;
+ }
 
 *,
 *::before,
@@ -177,14 +197,29 @@ picture {
     scroll-behavior: auto !important;
   }
 }
+/*********************** Background image setup ******************/
+body {
+  background-size: cover;
+  background-position: bottom;
+}
 
+.home-img {
+  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-mobile.jpg);
+}
 
-/*********************Tag selectors**********************************/
-/* .home-img {
+@media (min-width: 35rem) {
+  .home-img {
+    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+  .home-img {
     background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
-    background-size: cover;
-    color: #ffff;    
-} */
+  }
+}
+/*********************Tag selectors**********************************/
+
 
 a {
   text-decoration: none;
@@ -217,15 +252,27 @@ letter-spacing: 2.7px;
   max-width: 80rem;
 }
 
+/* place-items and place-content are different because content would place things together and 
+items will leave some gap, but with content you can use
+row-gap to give separation. */
 .grid-container {
+  text-align: center;
   display: grid;
   border: 5px limegreen solid;
-  
-
+  place-items: center;
+  padding-inline: 1rem;
 }
+
+.grid-container * {
+  max-width: 45ch;
+}
+
+
+
 /* tablet size screen, media query */
 @media (min-width: 45rem) {
   .grid-container {
+    text-align: left;
       column-gap: var(--container-gap, 2rem);
       grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
   }
@@ -239,12 +286,18 @@ letter-spacing: 2.7px;
       grid-column: 3;
       outline: 1px solid yellow;
   }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
 }
 /******************** components *************************************/
 
 
 .large-button {
   position: relative;
+  font-size: 2rem;
   z-index: 1;
   display: inline-grid;
   place-items: center;
