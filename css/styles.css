@@ -151,13 +151,50 @@ picture {
 
 /******testing*****/
 
+/* flex-direction: column makes the menu into a burger menu */
+/* position-fixed makes the menu positioned relative to the viewport, 
+which means it always stays in the same place even if the page is scrolled,
+it will cover the content */
+/* Inset  is a shorthand that corresponds to the top, right, bottom, and/or left properties. 
+It has the same multi-value syntax of the margin shorthand. */
+/* z-index to cover the explore button */
+/* MAKE SURE TO HAVE YOUR DEFAULT SETTINGS ON TOP OF YOUR MEDIA QUERY
+because the cascading thing */
 .primary-navigation {
-  --gap: 2rem;
+  background: hsl( var(--clr-dark) / 0.95);
+  /* backdrop-filter: blur(1.5rem); */
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
+/* This is for browser support and make sure you add property + value */
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+      background: hsl( var(--clr-white) / 0..05);
+      backdrop-filter: blur(1.5rem);
+  }
+}
+
+/* 0 border will remove the active state */
+@media (max-width: 35rem) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 1000;
+    padding: min(20rem, 15vh) 4rem;
+    --underline-gap: .5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+  }
+  .primary-navigation.underline-indicators > .active {
+    border: 0;
+  }
+}
+
+
 
 .primary-navigation a {
   text-decoration: none;
@@ -220,6 +257,12 @@ body {
 }
 /*********************Tag selectors**********************************/
 
+/* .mobile-nav-toggle{
+  background: rgba(255, 255, 255, 0.04);;
+  display: inline-block;
+  text-align: center;
+  backdrop-filter: blur(1px);
+} */
 
 a {
   text-decoration: none;
