@@ -27,7 +27,17 @@
 .ff-sans-normal{font-family: var(--ff-sans-normal); }
 .uppercase { text-transform: uppercase; }
 
-
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 
 /* colors */
@@ -116,7 +126,8 @@ h6,
 p {
     font-weight: 400;
 }
-
+/* overflow-x, property sets what shows when content overflows a block-level 
+element's left and right edges. This may be nothing, a scroll bar, or the overflow content. */
 body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
@@ -127,6 +138,9 @@ body {
 
   display: grid;
   grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
+
 }
 
 /* make images easier to work with */
@@ -134,6 +148,13 @@ img,
 picture {
     max-width: 100%;
     display: block;
+}
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 /*******screen reader only************/
 .sr-only {
@@ -148,134 +169,6 @@ picture {
   border: 0;
 }
 
-
-/******testing*****/
-
-/* flex-direction: column makes the menu into a burger menu */
-/* position-fixed makes the menu positioned relative to the viewport, 
-which means it always stays in the same place even if the page is scrolled,
-it will cover the content */
-/* Inset  is a shorthand that corresponds to the top, right, bottom, and/or left properties. 
-It has the same multi-value syntax of the margin shorthand. */
-/* z-index to cover the explore button */
-/* MAKE SURE TO HAVE YOUR DEFAULT SETTINGS ON TOP OF YOUR MEDIA QUERY
-because the cascading thing */
-.primary-navigation {
-  background: hsl( var(--clr-dark) / 0.95);
-  /* backdrop-filter: blur(1.5rem); */
-  --underline-gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-/* This is for browser support and make sure you add property + value */
-@supports (backdrop-filter: blur(1rem)) {
-  .primary-navigation {
-      background: hsl( var(--clr-white) / 0..05);
-      backdrop-filter: blur(1.5rem);
-  }
-}
-
-/* 0 border will remove the active state */
-@media (max-width: 35rem) {
-  .primary-navigation {
-    position: fixed;
-    inset: 0 0 0 30%;
-    z-index: 1000;
-    padding: min(20rem, 15vh) 4rem;
-    --underline-gap: .5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-direction: column;
-  }
-  .primary-navigation.underline-indicators > .active {
-    border: 0;
-  }
-}
-
-
-
-.primary-navigation a {
-  text-decoration: none;
-}
-
-.primary-navigation a > span {
-  font-weight: 700;
-  margin-right: .5em;
-}
-
-.underline-indicators > * {
-  cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
-  border: 0;
-  border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
-}
-
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
-  border-color: hsl( var(--clr-white) / .5);
-}
-
-.underline-indicators > .active,
-.underline-indicators > [aria-selected="true"] {
-  color: hsl( var(--clr-white) / 1);
-  border-color: hsl( var(--clr-white) / 1); 
-}
-
-/* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-/*********************** Background image setup ******************/
-body {
-  background-size: cover;
-  background-position: bottom;
-}
-
-.home-img {
-  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-mobile.jpg);
-}
-
-@media (min-width: 35rem) {
-  .home-img {
-    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-tablet.jpg);
-  }
-}
-
-@media (min-width: 45rem) {
-  .home-img {
-    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
-  }
-}
-/*********************Tag selectors**********************************/
-
-/* .mobile-nav-toggle{
-  background: rgba(255, 255, 255, 0.04);;
-  display: inline-block;
-  text-align: center;
-  backdrop-filter: blur(1px);
-} */
-
-a {
-  text-decoration: none;
-  color:#ffff;
-  margin: 10px 20px;
-  font-family: Barlow Condensed;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-letter-spacing: 2.7px;
-  
-}
 /********************utility classes*********/
 
 .flex {
@@ -301,7 +194,7 @@ row-gap to give separation. */
 .grid-container {
   text-align: center;
   display: grid;
-  border: 5px limegreen solid;
+  /* border: 5px limegreen solid; */
   place-items: center;
   padding-inline: 1rem;
 }
@@ -322,12 +215,12 @@ row-gap to give separation. */
   
   .grid-container > *:first-child {
       grid-column: 2;
-      outline: 1px solid red;
+      /* outline: 1px solid red; */
   }
 
   .grid-container > *:last-child {
       grid-column: 3;
-      outline: 1px solid yellow;
+      /* outline: 1px solid yellow; */
   }
 
   .grid-container--home {
@@ -369,10 +262,146 @@ row-gap to give separation. */
 }
 
 
+
+/******testing*****/
+
+/* flex-direction: column makes the menu into a burger menu */
+/* position-fixed makes the menu positioned relative to the viewport, 
+which means it always stays in the same place even if the page is scrolled,
+it will cover the content */
+/* Inset  is a shorthand that corresponds to the top, right, bottom, and/or left properties. 
+It has the same multi-value syntax of the margin shorthand. */
+/* z-index to cover the explore button */
+/* MAKE SURE TO HAVE YOUR DEFAULT SETTINGS ON TOP OF YOUR MEDIA QUERY
+because the cascading thing */
+.primary-navigation {
+  background: hsl( var(--clr-dark) / 0.95);
+  /* backdrop-filter: blur(1.5rem); */
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+/* This is for browser support and make sure you add property + value */
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+      background: hsl( var(--clr-white) / 0..05);
+      backdrop-filter: blur(1.5rem);
+  }
+}
+
+/* 0 border will remove the active state */
+@media (max-width: 35rem) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 2000;
+    padding: min(20rem, 15vh) 4rem;
+    --underline-gap: .5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    transform: translateX(100%);
+  }
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0);
+}
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    right: 1rem;
+    top: 2rem;
+    background: transparent;
+    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/shared/icon-hamburger.svg);
+    width: 1.5rem;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    border: 0;
+  }
+  
+}
+
+
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
+.underline-indicators > * {
+  cursor: pointer;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  color: hsl( var(--clr-white) / 1);
+  border-color: hsl( var(--clr-white) / 1); 
+}
+
+
+/*********************** Background image setup ******************/
+body {
+  background-size: cover;
+  background-position: bottom;
+}
+
+.home-img {
+  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+  .home-img {
+    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+  .home-img {
+    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
+  }
+}
+/*********************Tag selectors**********************************/
+
+
+
+/* a {
+  text-decoration: none;
+  color:#ffff;
+  margin: 10px 20px;
+  font-family: Barlow Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 2.7px;
+  
+} */
+
+
 /*********************Class Selectors**********************************/
 
 
-.home-top {
+/* .home-top {
   position: absolute;
 width: 1385px;
 height: 96px;
@@ -454,10 +483,10 @@ font-size: 28px;
 line-height: 34px;
 /* identical to box height */
 
-letter-spacing: 4.725px;
+/* letter-spacing: 4.725px;
 
 color: #D0D6F9;
-}
+} */
 
 
 
@@ -927,5 +956,5 @@ color: #0B0D17;
   
   left: 820px;
   top: 198px;
-}
+} 
 

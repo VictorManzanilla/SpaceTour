@@ -11,6 +11,11 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- If async is present: The script is downloaded in parallel to parsing the page, and executed as soon as it is available (before parsing completes)
+If defer is present (and not async): The script is downloaded in parallel to parsing the page, and executed after the page has finished parsing
+If neither async or defer is present: The script is downloaded and executed immediately, blocking parsing until the script is completed -->
+  <script src="index.js" defer></script>
   
   <title>🪐Space tourism website</title>
 </head>
@@ -27,7 +32,7 @@
     <!-- <div class="navbar"> -->
     
       <nav>
-        <ul id="primary-navigation" class="primary-navigation underline-indicators flex">
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
             <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span>00</span>Home</a>
             <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination-moon.html"><span>01</span>Destination</a>
             <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew-commander.html"><span>02</span>Crew</a>
