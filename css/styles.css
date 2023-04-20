@@ -369,17 +369,55 @@ at the nav menu to the logo distance*/
     outline-offset: 5px;
   }
 }
+
+@media (min-width: 35em) {
+  .primary-navigation {
+    padding-inline: clamp(3rem, 5vw, 6rem)
+  }
+}
+
+
 /* padding-inline, defines the logical inline start and end padding of an element,
  which maps to physical padding properties depending 
  on the element's writing mode, directionality, and text orientation. */
-@media (min-width: 35em) and (max-width: 45em) {
-    .primary-navigation {
+ /* max-width has that value because the numbers on the menu items would 
+ disappear before getting to tablet size */
+@media (min-width: 35em) and (max-width: 44.999em) {
+    /* .primary-navigation {
       padding-inline: 3rem;
-    }
+    } */
     /* to modify a selector in this case we want the numbers next to the menu items to disappear 
     at the tablet screen size, we can specify like below */
     .primary-navigation a > span {
       display: none;
+  }
+}
+/* margin-block,defines the logical block start and end margins of an element, 
+which maps to physical margins depending 
+on the element's writing mode, directionality, and text orientation. */
+/* psuedo element ::before will place grey bar before the logo and 
+::after will place it after the nav menu, so had to use
+order to place grey bar between them */
+/* margin-right is there to it hovers over menu */
+@media (min-width: 45em) {
+
+  .primary-header::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: hsl( var(--clr-white) / .25);
+    order: 1;
+    margin-right: -2.5rem;
+
+}
+
+nav {
+   order: 2;
+}
+  .primary-navigation {
+      margin-block: 2rem;
   }
 }
 
