@@ -289,13 +289,19 @@ It has the same multi-value syntax of the margin shorthand. */
 /* z-index to cover the explore button */
 /* MAKE SURE TO HAVE YOUR DEFAULT SETTINGS ON TOP OF YOUR MEDIA QUERY
 because the cascading thing */
+/* --gap: clamp(1.5rem, 5vw, 3.5rem);  this line gives the tablet to mobile 
+nav menu length size a better transition, remove this and look
+at the nav menu to the logo distance*/
+
 .primary-navigation {
-  background: hsl( var(--clr-dark) / 0.95);
-  /* backdrop-filter: blur(1.5rem); */
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
   --underline-gap: 2rem;
+  background: hsl( var(--clr-dark) / 0.95);
+  backdrop-filter: blur(1.5rem);
   list-style: none;
   padding: 0;
   margin: 0;
+  border: 1px blue solid;
 }
 
 .primary-navigation a {
@@ -361,11 +367,21 @@ because the cascading thing */
   .mobile-nav-toggle:focus-visible {
     outline: 5px solid red;
     outline-offset: 5px;
+  }
 }
-  
+/* padding-inline, defines the logical inline start and end padding of an element,
+ which maps to physical padding properties depending 
+ on the element's writing mode, directionality, and text orientation. */
+@media (min-width: 35em) and (max-width: 45em) {
+    .primary-navigation {
+      padding-inline: 3rem;
+    }
+    /* to modify a selector in this case we want the numbers next to the menu items to disappear 
+    at the tablet screen size, we can specify like below */
+    .primary-navigation a > span {
+      display: none;
+  }
 }
-
-
 
 
 
