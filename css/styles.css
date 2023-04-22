@@ -462,7 +462,7 @@ nav {
 /*********************** Background image setup ******************/
 body {
   background-size: cover;
-  background-position: bottom;
+  background-position: bottom center;
 }
 
 .home-img {
@@ -479,6 +479,10 @@ body {
   .home-img {
     background-image: url(../assets/home/background-home-desktop.jpg);
   }
+}
+
+.destination {
+  background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 /*********************Tag selectors**********************************/
 

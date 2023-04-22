@@ -7,27 +7,30 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="./css/styles.css">
 
-  <title>🪐Space tourism website</title>
-</head>
-<body class="destination-background-image" >
+  <script src="index.js" defer></script>
 
-  <section class="home-top">
-    
-    
-    <div class="bar"></div>
-    <div class="navbar">
-      <div class="small-rectangle"></div>
-      <div class="nav">
-        <span>
-          <a href="">00 Home</a>
-          <a href="">01 Destination</a>
-          <a href="">02 Crew</a>
-          <a href="">03 Technology</a>
-      </span>
-      </div>
-      
+
+  <title>🪐Space tour site</title>
+</head>
+<body class="destination" >
+
+  <a class="skip-to-content" href="#main"> Skip to Content</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
     </div>
-  </section>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+      <span class="sr-only" aria-expanded="false">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+          <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+          <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination-moon.html"><span aria-hidden="true">01</span>Destination</a>
+          <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew-commander.html"><span aria-hidden="true">02</span>Crew</a>
+          <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology-capsule.html"><span aria-hidden="true">03</span>Technology</a>
+      </ul>
+  </nav>
 
   <div class="destination">
     <div class="number-01">01</div>
