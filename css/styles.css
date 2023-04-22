@@ -369,7 +369,7 @@ at the nav menu to the logo distance*/
     right: 1rem;
     top: 2rem;
     background: transparent;
-    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/shared/icon-hamburger.svg);
+    background-image: url(../assets/shared/icon-hamburger.svg);
     width: 1.5rem;
     aspect-ratio: 1;
     background-repeat: no-repeat;
@@ -377,7 +377,7 @@ at the nav menu to the logo distance*/
     border: 0;
   }
   .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/shared/icon-close.svg);
+    background-image: url(../assets/shared/icon-close.svg);
   }
   /* this will make it easier to select with the tab button on your keyword
   and highlight in the options in red */
