@@ -466,18 +466,18 @@ body {
 }
 
 .home-img {
-  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-mobile.jpg);
+  background-image: url(../assets/home/background-home-mobile.jpg);
 }
 
 @media (min-width: 35rem) {
   .home-img {
-    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-tablet.jpg);
+    background-image: url(../assets/home/background-home-tablet.jpg);
   }
 }
 
 @media (min-width: 45rem) {
   .home-img {
-    background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/home/background-home-desktop.jpg);
+    background-image: url(../assets/home/background-home-desktop.jpg);
   }
 }
 /*********************Tag selectors**********************************/
