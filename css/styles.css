@@ -156,7 +156,7 @@ textarea,
 select {
     font: inherit;
 }
-/*******screen reader only************/
+/******* Accessibility screen reader only************/
 .sr-only {
   position: absolute;
   width: 1px;
@@ -167,6 +167,23 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+/* transform: translateY(-100%) moves the skip-to-content link up away form the screen
+the transform: translateY(0) will bring it back down the page */
+/* transition will give it animation */
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: hsl( var(--clr-white) );
+  color: hsl( var(--clr-dark) );
+  padding: .5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
 }
 
 /********************utility classes*********/
