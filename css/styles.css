@@ -98,6 +98,8 @@
   display: block;
  }
 
+
+
 *,
 *::before,
 *::after {
@@ -184,6 +186,20 @@ the transform: translateY(0) will bring it back down the page */
 
 .skip-to-content:focus {
   transform: translateY(0);
+}
+
+
+.numbered-title {
+  font-family: var(--ff-sans-cond);
+  font-size: var(--fs-500);
+  text-transform: uppercase;
+  letter-spacing: 4.72px; 
+}
+
+.numbered-title span {
+  margin-right: .5em;
+  font-weight: 700;
+  color: hsl( var(--clr-white) / .25);
 }
 
 /********************utility classes*********/
@@ -318,7 +334,7 @@ at the nav menu to the logo distance*/
   list-style: none;
   padding: 0;
   margin: 0;
-  border: 1px blue solid;
+
 }
 
 .primary-navigation a {
@@ -459,6 +475,27 @@ nav {
 }
 
 
+.tab-list {
+  --gap: 2rem;
+}
+
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  padding: .5em;
+  background-color: hsl( var(--clr-white) / .25);
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus { 
+  background-color: hsl( var(--clr-white) / .5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl( var(--clr-white) / 1); 
+}
+
 /*********************** Background image setup ******************/
 body {
   background-size: cover;
@@ -485,220 +522,13 @@ body {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 
-/*********************Class Selectors**********************************/
-
-
-/* .number-01 {
-  position: absolute;
-height: 34px;
-left: 0%;
-right: 93.19%;
-top: calc(50% - 34px/2);
-
-font-family: Barlow Condensed;
-font-style: normal;
-font-weight: bold;
-font-size: 28px;
-line-height: 34px;
-/* identical to box height */
-
-/* letter-spacing: 4.725px;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-opacity: 0.25;
-} */
-
-/* .pick {
-  position: absolute;
-height: 34px;
-left: 14.14%;
-right: 1.57%;
-top: calc(50% - 34px/2);
-
-font-family: Barlow Condensed;
-font-style: normal;
-font-weight: normal;
-font-size: 28px;
-line-height: 34px;
-/* identical to box height */
-
-/* letter-spacing: 4.725px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-
-}  */
 
 
 
-.satellite-picture {
-  position: absolute;
-width: 445px;
-height: 445px;
-left: 230px;
-top: 343px;
-}
-
-.description-box {
-  position: absolute;
-width: 445px;
-height: 472px;
-left: 832px;
-top: 310px;
-}
-
-.description-subnav {
-  position: absolute;
-left: 0%;
-right: 35.84%;
-top: 0%;
-bottom: 92.8%;
-}
-
-.moon {
-  position: absolute;
-height: 19px;
-left: 0.18%;
-right: 86.16%;
-top: calc(50% - 19px/2 - 7.5px);
-
-font-family: Barlow Condensed;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-letter-spacing: 2.7px;
-
-color: #FFFFFF;
-}
-
-.mars {
-  position: absolute;
-height: 19px;
-left: 26.09%;
-right: 60.95%;
-top: calc(50% - 19px/2 - 7.5px);
-
-font-family: Barlow Condensed;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-letter-spacing: 2.7px;
-
-color: #D0D6F9;
-
-}
-
-.europa {
-  position: absolute;
-height: 19px;
-left: 51.66%;
-right: 28.72%;
-top: calc(50% - 19px/2 - 7.5px);
-
-font-family: Barlow Condensed;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-letter-spacing: 2.7px;
-
-color: #D0D6F9;
-}
-
-.titan {
-  position: absolute;
-height: 19px;
-left: 83.89%;
-right: 1.4%;
-top: calc(50% - 19px/2 - 7.5px);
-
-font-family: Barlow Condensed;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-letter-spacing: 2.7px;
-
-color: #D0D6F9;
-
-}
-
-.moon-description-subnav-rectangle {
-  position: absolute;
-left: 0%;
-right: 85.64%;
-top: 91.18%;
-bottom: 0%;
-
-background: #FFFFFF;
-}
-
-.satellite-title {
-  position: absolute;
-height: 115px;
-left: 0.11%;
-right: 25.06%;
-top: calc(50% - 115px/2 - 107.5px);
-
-font-family: Bellefair;
-font-style: normal;
-font-weight: normal;
-font-size: 100px;
-line-height: 115px;
-/* identical to box height */
 
 
-color: #FFFFFF;
-}
-
-.satellite-description {
-  position: absolute;
-height: 128px;
-left: 0%;
-right: 0.22%;
-top: calc(50% - 128px/2 + 28px);
-
-font-family: Barlow;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 32px;
-/* or 178% */
 
 
-color: #D0D6F9;
-}
-
-.description-long-rectangle {
-  position: absolute;
-left: 0.22%;
-right: 0%;
-top: 80.93%;
-bottom: 18.86%;
-
-background: #383B4B;
-}
-
-.distance {
-  position: absolute;
-left: 0.11%;
-right: 67.75%;
-top: 87.08%;
-bottom: 0%;
-}
-
-.time {
-  position: absolute;
-left: 50%;
-right: 22.58%;
-top: 87.08%;
-bottom: 0%;
-
-}  
 
 /******************** people pages css *************************************/
 

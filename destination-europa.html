@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/styles.css">
+  
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
       rel="stylesheet">
 
+  <link rel="stylesheet" href="./css/styles.css">
   <script src="index.js" defer></script>
 
 
   <title>🪐Space tour site</title>
 </head>
+
 <body class="destination" >
 
   <a class="skip-to-content" href="#main"> Skip to Content</a>
@@ -27,8 +29,9 @@
     <button class="mobile-nav-toggle" aria-controls="primary-navigation">
       <span class="sr-only" aria-expanded="false">Menu</span>
     </button>
+  
 
-    <nav>
+  <nav>
       <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
           <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
           <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination-moon.html"><span aria-hidden="true">01</span>Destination</a>
@@ -36,37 +39,45 @@
           <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology-capsule.html"><span aria-hidden="true">03</span>Technology</a>
       </ul>
   </nav>
+  </header>
 
-  <main id="main" class="grid-container-xxxxx grid-container--destination">
+  <main id="main" class="grid-container-xxxx grid-container--destination">
 
-
-    01
-    Pick your destination
+    <h1 class="numbered-title"><span aria-hidden="true">01</span>Pick Your Destination</h1>
+        <img src="./assets/destination/image-europa.png" alt="Europa moon">
    
-   
-        Moon
-        Mars
-        Europa
-        Titan
+        <div class="tab-list underline-indicators flex">
+          <button aria-selected="true" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Moon</button>
+          <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Mars</button>
+          <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Europa</button>
+          <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Titan</button>
+
+      </div>
+       
+      <article>
+         <h1>Europa</h1> 
       
-  
-    
-      Europa
-  
-  
-   
-        The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-    winter lover’s dream. With an icy surface, it’s perfect for a bit of 
-    ice skating, curling, hockey, or simple relaxation in your snug 
-    wintery cabin.
-  
-      Avg. distance
-      628 mil. km
-  
-   
-      
-    Est. travel time
-    3 years
+        <p> The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
+             winter lover’s dream. With an icy surface, it’s perfect for a bit of 
+              ice skating, curling, hockey, or simple relaxation in your snug 
+              wintery cabin.
+        </p>
+        <!-- Wrapped individually because 
+          so they are gonna need space and to keep h3 and p together
+          and then wrapped with a div because they are gonna be in two columns or one column depending 
+        on the screen size, for the columns we need flex -->
+          <div>
+            <div>
+              <h3>Avg. distance</h3>
+                <p>628 mil. km</p>
+            </div>
+              <div>
+                <h3>Est. travel time</h3>
+                    <p>3 years</p>
+              </div>
+          </div>
+
+      </article>
   </main>
 
  
