@@ -221,46 +221,7 @@ the transform: translateY(0) will bring it back down the page */
   max-width: 80rem;
 }
 
-/* place-items and place-content are different because content would place things together and 
-items will leave some gap, but with content you can use
-row-gap to give separation. */
-.grid-container {
-  text-align: center;
-  display: grid;
-  /* border: 5px limegreen solid; */
-  place-items: center;
-  padding-inline: 1rem;
-}
 
-.grid-container * {
-  max-width: 45ch;
-}
-
-
-
-/* tablet size screen, media query */
-@media (min-width: 45rem) {
-  .grid-container {
-    text-align: left;
-      column-gap: var(--container-gap, 2rem);
-      grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
-  }
-  
-  .grid-container > *:first-child {
-      grid-column: 2;
-      /* outline: 1px solid red; */
-  }
-
-  .grid-container > *:last-child {
-      grid-column: 3;
-      /* outline: 1px solid yellow; */
-  }
-
-  .grid-container--home {
-    padding-bottom: max(6rem, 20vh);
-    align-items: end;
-  }
-}
 /******************** components *************************************/
 
 
@@ -524,7 +485,83 @@ body {
 
 
 
+/******************************* LAYOUT  ***************************/
 
+/* place-items and place-content are different because content would place things together and 
+items will leave some gap, but with content you can use
+row-gap to give separation. */
+.grid-container {
+  text-align: center;
+  display: grid;
+  /* border: 5px limegreen solid; */
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+.grid-container * {
+  max-width: 45ch;
+}
+
+.numbered-title {
+  grid-area: 'title';
+}
+
+/**********************DESTINATION LAYOUT ***********************/
+
+.grid-container--destination {
+  grid-template-areas: 
+      'title'
+      'image'
+      'tabs'
+      'content';
+}
+
+.grid-container--destination > img {
+  grid-area: 'image';
+  max-width: 60%;
+}
+
+.grid-container--destination > .tab-list {
+  grid-area: 'tabs';
+  max-width: 60%;
+}
+
+.grid-container--destination > .destination-info {
+  grid-area: 'content';
+  max-width: 60%;
+}
+.destination-details {
+  flex-direction: column;
+  border-top: 1px solid hsl( var(--clr-white) / .1);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+
+}
+
+
+/* tablet size screen, media query */
+@media (min-width: 45rem) {
+  .grid-container {
+    text-align: left;
+      column-gap: var(--container-gap, 2rem);
+      grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+  }
+  
+  .grid-container > *:first-child {
+      grid-column: 2;
+      /* outline: 1px solid red; */
+  }
+
+  .grid-container > *:last-child {
+      grid-column: 3;
+      /* outline: 1px solid yellow; */
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
+}
 
 
 
