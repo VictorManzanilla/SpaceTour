@@ -290,8 +290,8 @@ at the nav menu to the logo distance*/
 .primary-navigation {
   --gap: clamp(1.5rem, 5vw, 3.5rem);
   --underline-gap: 2rem;
-  background: hsl( var(--clr-dark) / 0.95);
-  backdrop-filter: blur(1.5rem);
+  background: hsl( var(--clr-white) / 0.05);
+  backdrop-filter: blur(1rem);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -493,9 +493,11 @@ row-gap to give separation. */
 .grid-container {
   text-align: center;
   display: grid;
-  /* border: 5px limegreen solid; */
+  border: 5px limegreen solid;
   place-items: center;
   padding-inline: 1rem;
+  padding-bottom: 4rem;
+
 }
 
 .grid-container * {
@@ -509,6 +511,7 @@ row-gap to give separation. */
 /**********************DESTINATION LAYOUT ***********************/
 
 .grid-container--destination {
+  --flow-space: 2rem;
   grid-template-areas: 
       'title'
       'image'
@@ -523,12 +526,12 @@ row-gap to give separation. */
 
 .grid-container--destination > .tab-list {
   grid-area: 'tabs';
-  max-width: 60%;
+  
 }
 
 .grid-container--destination > .destination-info {
   grid-area: 'content';
-  max-width: 60%;
+ 
 }
 .destination-details {
   flex-direction: column;
@@ -538,9 +541,15 @@ row-gap to give separation. */
 
 }
 
+@media (min-width: 35em) {
+  .numbered-title {
+    place-items: left;
+  }
+}
+
 
 /* tablet size screen, media query */
-@media (min-width: 45rem) {
+@media (min-width: 45em) {
   .grid-container {
     text-align: left;
       column-gap: var(--container-gap, 2rem);
