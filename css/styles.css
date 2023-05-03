@@ -319,7 +319,7 @@ at the nav menu to the logo distance*/
   }
 }
 
-/* 0 border will remove the active state */
+/* 0 margin will remove the active state */
 @media (max-width: 35rem) {
   .primary-navigation {
     position: fixed;
@@ -483,7 +483,17 @@ body {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 
+@media (min-width: 35rem) {
+  .destination {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+}
 
+@media (min-width: 45rem) {
+  .destination {
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+  }
+}
 
 /******************************* LAYOUT  ***************************/
 
@@ -505,7 +515,7 @@ row-gap to give separation. */
 }
 
 .numbered-title {
-  grid-area: 'title';
+  grid-area: title;
 }
 
 /**********************DESTINATION LAYOUT ***********************/
@@ -520,17 +530,17 @@ row-gap to give separation. */
 }
 
 .grid-container--destination > img {
-  grid-area: 'image';
+  grid-area: image;
   max-width: 60%;
 }
 
 .grid-container--destination > .tab-list {
-  grid-area: 'tabs';
+  grid-area: tabs;
   
 }
 
 .grid-container--destination > .destination-info {
-  grid-area: 'content';
+  grid-area: content;
  
 }
 .destination-details {
@@ -541,9 +551,19 @@ row-gap to give separation. */
 
 }
 
+/* we used this here because everything is on a grid,
+so to move the title to the left we use justify-self, 
+using text-align: left; will not change it */
+/* the margin-top will add space between the title and nav */
 @media (min-width: 35em) {
   .numbered-title {
-    place-items: left;
+    justify-self: start;
+    margin-top: 2rem;
+  }
+  .destination-details {
+    flex-direction: row;
+    justify-content: space-evenly;
+  
   }
 }
 
@@ -553,22 +573,31 @@ row-gap to give separation. */
   .grid-container {
     text-align: left;
       column-gap: var(--container-gap, 2rem);
-      grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+      grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+  }
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
   }
   
-  .grid-container > *:first-child {
+  .grid-container--home > *:first-child {
       grid-column: 2;
       /* outline: 1px solid red; */
   }
 
-  .grid-container > *:last-child {
+  .grid-container--home > *:last-child {
       grid-column: 3;
       /* outline: 1px solid yellow; */
   }
 
-  .grid-container--home {
-    padding-bottom: max(6rem, 20vh);
-    align-items: end;
+  
+  .grid-container--destination {
+    justify-items: start;
+    grid-template-areas: 
+        '. title title .'
+        '. image tabs .'
+        '. image content .';
+      
   }
 }
 
