@@ -503,15 +503,19 @@ row-gap to give separation. */
 .grid-container {
   text-align: center;
   display: grid;
-  border: 5px limegreen solid;
+  /* border: 5px limegreen solid; */
   place-items: center;
   padding-inline: 1rem;
   padding-bottom: 4rem;
 
 }
 
-.grid-container * {
+/* this will select limit the characters in all p tags without class in them */
+/* this was added because the p tags were not condensed */
+.grid-container p:not([class]) {
   max-width: 45ch;
+  
+
 }
 
 .numbered-title {
@@ -549,6 +553,10 @@ row-gap to give separation. */
   padding-top: 2.5rem;
   margin-top: 2.5rem;
 
+}
+/* the size is applied to all the p tags within class destination-details */
+.destination-details p {
+  font-size: 1.5rem;
 }
 
 /* we used this here because everything is on a grid,
@@ -590,14 +598,31 @@ using text-align: left; will not change it */
       /* outline: 1px solid yellow; */
   }
 
-  
+  /* grid-template-areas are connected with the values of grid-template-columns: ;; */
+  /* align-content is for larger screens, so things to expand away from each other */
   .grid-container--destination {
     justify-items: start;
+    align-content: start;
     grid-template-areas: 
         '. title title .'
         '. image tabs .'
         '. image content .';
       
+  }
+  .grid-container--destination > img {
+    grid-area: image;
+    max-width: 90%;
+  }
+/* the min() will choose whichever one is smaller according to screen size
+so if the screen is big then it will choose 6rem because its smaller,
+but if the screen is small then it will choose the 6viewport width */
+  .destination-details {
+    justify-content: start;
+    --gap: min(6vw, 6rem);
+  
+
+    
+  
   }
 }
 
