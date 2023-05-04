@@ -500,6 +500,18 @@ body {
   background-image: url(../assets/crew/background-crew-mobile.jpg);
 }
 
+@media (min-width: 35rem) {
+  .crew {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+  .crew {
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
+  }
+}
+
 
 /******************************* LAYOUT  ***************************/
 
@@ -625,16 +637,18 @@ but if the screen is small then it will choose the 6viewport width */
   .destination-details {
     justify-content: start;
     --gap: min(6vw, 6rem);
-  
-
-    
-  
   }
 }
 
+/********************************** CREW LAYOUT **********************************/
+.pic-bar {
+  border-bottom: 1px solid hsl( var(--clr-white) / .1);
+}
 
-
-
+.crew-info {
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
 
 /******************** people pages css *************************************/
 
