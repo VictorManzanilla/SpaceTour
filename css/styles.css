@@ -479,6 +479,7 @@ body {
   }
 }
 
+
 .destination {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
@@ -494,6 +495,11 @@ body {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
   }
 }
+
+.crew {
+  background-image: url(../assets/crew/background-crew-mobile.jpg);
+}
+
 
 /******************************* LAYOUT  ***************************/
 
@@ -632,14 +638,7 @@ but if the screen is small then it will choose the 6viewport width */
 
 /******************** people pages css *************************************/
 
-.crew-background-image {
-  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/crew/background-crew-desktop.jpg);
-  position: absolute;
- 
-  left: -7px;
-  top: -31px;
 
-}
 
 .subheadline {
   position: absolute;
