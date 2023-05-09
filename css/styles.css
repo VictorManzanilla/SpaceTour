@@ -521,7 +521,7 @@ row-gap to give separation. */
 .grid-container {
   text-align: center;
   display: grid;
-  /* border: 5px limegreen solid; */
+  border: 5px limegreen solid;
   place-items: center;
   padding-inline: 1rem;
   padding-bottom: 4rem;
@@ -645,7 +645,14 @@ but if the screen is small then it will choose the 6viewport width */
   border-bottom: 1px solid hsl( var(--clr-white) / .1);
 }
 
-
+.grid-container--crew {
+  --flow-space: 2rem;
+  grid-template-areas: 
+      'title'
+      'image'
+      'tabs'
+      'content';
+}
 
 /******************** people pages css *************************************/
 
