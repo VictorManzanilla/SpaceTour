@@ -577,6 +577,39 @@ row-gap to give separation. */
   font-size: 1.5rem;
 }
 
+
+
+
+
+
+/********************************** CREW LAYOUT **********************************/
+
+
+.grid-container--crew {
+  --flow-space: 2rem;
+  grid-template-areas: 
+      'title'
+      'image'
+      'dots'
+      'content';
+}
+.grid-container--crew > img {
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid hsl( var(--clr-white) / .1);
+
+}
+
+.grid-container--crew > .dot-indicators {
+  grid-area: dots;
+  
+}
+
+.grid-container--crew > .crew-info {
+  grid-area: content;
+ 
+}
+
 /* we used this here because everything is on a grid,
 so to move the title to the left we use justify-self, 
 using text-align: left; will not change it */
@@ -591,10 +624,15 @@ using text-align: left; will not change it */
     justify-content: space-evenly;
   
   }
+  .grid-container--crew {
+    grid-template-areas: 
+        'title'
+        'content'
+        'dots'
+        'image';
+  }
 }
-
-
-/* tablet size screen, media query */
+/* large size screen, media query */
 @media (min-width: 45em) {
   .grid-container {
     text-align: left;
@@ -627,10 +665,13 @@ using text-align: left; will not change it */
         '. image content .';
       
   }
-  .grid-container--destination > img {
+  .grid-container--destination > img,
+  .grid-container--crew > img {
     grid-area: image;
     max-width: 90%;
   }
+
+ 
 /* the min() will choose whichever one is smaller according to screen size
 so if the screen is big then it will choose 6rem because its smaller,
 but if the screen is small then it will choose the 6viewport width */
@@ -638,21 +679,20 @@ but if the screen is small then it will choose the 6viewport width */
     justify-content: start;
     --gap: min(6vw, 6rem);
   }
+
+  .grid-container--crew {
+    grid-template-areas: 
+        '. title title .'
+        '. content image .'
+        '. dots image .';
+     
+  }
+  .grid-container--crew > .dot-indicators {
+    justify-self: start;
+  }
 }
 
-/********************************** CREW LAYOUT **********************************/
-.pic-bar {
-  border-bottom: 1px solid hsl( var(--clr-white) / .1);
-}
 
-.grid-container--crew {
-  --flow-space: 2rem;
-  grid-template-areas: 
-      'title'
-      'image'
-      'tabs'
-      'content';
-}
 
 /******************** people pages css *************************************/
 
