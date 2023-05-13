@@ -158,6 +158,8 @@ textarea,
 select {
     font: inherit;
 }
+
+
 /******* Accessibility screen reader only************/
 .sr-only {
   position: absolute;
@@ -419,9 +421,10 @@ nav {
 
 .underline-indicators > * {
   cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
+  padding: var(--underline-gap, .5rem) 0;
   border: 0;
   border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+  background-color: transparent;
 }
 
 .underline-indicators > *:hover,
@@ -480,7 +483,7 @@ body {
 }
 
 
-.destination {
+.destination  {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 
@@ -491,7 +494,7 @@ body {
 }
 
 @media (min-width: 45rem) {
-  .destination {
+  .destination  {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
   }
 }
@@ -690,6 +693,10 @@ but if the screen is small then it will choose the 6viewport width */
   .grid-container--crew > .dot-indicators {
     justify-self: start;
   }
+}
+/* color: hsl( var(--clr-white) / .5) this works too */
+.crew-info h2 {
+  opacity: .3;
 }
 
 
