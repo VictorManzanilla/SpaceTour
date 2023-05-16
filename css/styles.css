@@ -213,6 +213,10 @@ the transform: translateY(0) will bring it back down the page */
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
+/* we are modifying flow by adding -- then the name space-small*/
+.flow--space-small {
+  --flow-space: .5rem;
+}
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
