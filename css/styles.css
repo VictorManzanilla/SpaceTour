@@ -704,6 +704,10 @@ but if the screen is small then it will choose the 6viewport width */
 }
 
 
+[role="tab"]:focus {
+  color: blue;
+}
+
 
 /******************** people pages css *************************************/
 
