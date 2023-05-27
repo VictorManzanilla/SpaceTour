@@ -2,6 +2,14 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
+
+tabs.forEach((tab) => {
+    tab.addEventListener('click', changeTabPanel);
+   
+})
+
+
+
 let tabFocus = 0;
 
 // The numbers are the keycodes for the right and left keys. To that
@@ -37,3 +45,9 @@ tabList.addEventListener('keydown', (e) => {
     tabs[tabFocus].focus();
 
 })
+
+function changeTabPanel(e) {
+    const  targetTab = e.target;
+
+    
+}
