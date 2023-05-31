@@ -6,7 +6,7 @@ const tabs = tabList.querySelectorAll('[role="tab"]');
 tabs.forEach((tab) => {
     tab.addEventListener('click', changeTabPanel);
    
-})
+});
 
 
 
@@ -48,6 +48,21 @@ tabList.addEventListener('keydown', (e) => {
 
 function changeTabPanel(e) {
     const  targetTab = e.target;
+    const targetPanel = targetTab.getAttribute("aria-controls");
 
-    
+    const tabContainer = targetTab.parentNode;
+    const mainContainer = tabContainer.parentNode;
+ 
+    //we are selecting all articles
+    //then we loop through them and setting all to be hidden
+    mainContainer
+    .querySelectorAll('[role="tabpanel"]')
+    .forEach((article) => article.setAttribute("hidden", true));
+    //then here we are selecting the one have hidden removed
+    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+    // console.log(mainContainer)
+
+    mainContainer
+    .querySelectorAll('picture')
+    .forEach((pic) => pic.setAttribute("hidden", true));
 }

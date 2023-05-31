@@ -69,14 +69,14 @@
     </picture>
    
        <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
-          <button aria-selected="true" role="tab" class="uppercase ff-sans-cond text-accent  letter-spacing-2" tabindex="0">Moon</button>
-          <button aria-selected="false" role="tab" class="uppercase ff-sans-cond text-accent  letter-spacing-2" tabindex="-1">Mars</button>
-          <button aria-selected="false" role="tab" class="uppercase ff-sans-cond text-accent  letter-spacing-2" tabindex="-1">Europa</button>
-          <button aria-selected="false" role="tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1">Titan</button>
+          <button aria-selected="true" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent  letter-spacing-2" tabindex="0">Moon</button>
+          <button aria-selected="false" role="tab" aria-controls="mars-tab" class="uppercase ff-sans-cond text-accent  letter-spacing-2" tabindex="-1">Mars</button>
+          <button aria-selected="false" role="tab" aria-controls="europa-tab" class="uppercase ff-sans-cond text-accent  letter-spacing-2" tabindex="-1">Europa</button>
+          <button aria-selected="false" role="tab" aria-controls="titan-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1">Titan</button>
         </div>
                          <!-------------- Moon ---------------------->
 
-      <article class="destination-info">
+      <article class="destination-info" id="moon-tab" tabindex="0" role="tabpanel">
          <h1 class="fs-800 uppercase ff-serif">Moon</h1> 
       
         <p>  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
@@ -101,7 +101,7 @@
       </article>
                   <!-------------- Mars ---------------------->
 
-      <article hidden class="destination-info">
+      <article hidden class="destination-info" id="mars-tab" tabindex="0" role="tabpanel">
         <h1 class="fs-800 uppercase ff-serif">Mars</h1> 
      
        <p>  Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
@@ -123,7 +123,7 @@
      </article>
                        <!-------------- Europa ---------------------->
 
-     <article hidden class="destination-info">
+     <article hidden class="destination-info" id="europa-tab" tabindex="0" role="tabpanel">
       <h1 class="fs-800 uppercase ff-serif">Europa</h1> 
    
      <p> The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
@@ -145,7 +145,7 @@
 
    </article>
                   <!-------------- Titan ---------------------->
-   <article hidden class="destination-info">
+   <article hidden class="destination-info" id="titan-tab" tabindex="0" role="tabpanel">
     <h1 class="fs-800 uppercase ff-serif">Titan</h1> 
  
    <p>   The only moon known to have a dense atmosphere other than Earth, Titan 
