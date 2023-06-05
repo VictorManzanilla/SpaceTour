@@ -51,23 +51,54 @@ function changeTabPanel(e) {
     const targetPanel = targetTab.getAttribute("aria-controls");
     const targetImage = targetTab.getAttribute("data-image");
 
+    
     const tabContainer = targetTab.parentNode;
     const mainContainer = tabContainer.parentNode;
+
+    tabContainer
+    .querySelector('[aria-selected="true"]')
+    .setAttribute("aria-selected", false);
+    
+targetTab.setAttribute("aria-selected", true);
+
+hideContent(mainContainer, '[role="tabpanel"]');
+showContent(mainContainer, [`#${targetPanel}`]);
+
+hideContent(mainContainer, 'picture')
+showContent(mainContainer, [`#${targetImage}`])
+}
+
+function hideContent(parent, content) {
+parent
+    .querySelectorAll(content)
+    .forEach((item) => item.setAttribute("hidden", true));
+}
+
+function showContent(parent, content) {
+ parent.querySelector(content).removeAttribute('hidden');
+}
+
+
+/////////////// BEFORE REFRACTORING       ///////////////////////////////////
+    // tabContainer
+    //     .querySelector('[aria-selected="true"]')
+    //     .setAttribute("aria-selected", false);
+        
+    // targetTab.setAttribute("aria-selected", true);
  
     //we are selecting all articles
     //then we loop through them and setting all to be hidden
-    mainContainer
-    .querySelectorAll('[role="tabpanel"]')
-    .forEach((article) => article.setAttribute("hidden", true));
+    // mainContainer
+    // .querySelectorAll('[role="tabpanel"]')
+    // .forEach((panel) => panel.setAttribute("hidden", true));
     //then here we are selecting the one have hidden removed
-    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+    // mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
     // console.log(mainContainer)
 
-    mainContainer
-    .querySelectorAll('picture')
-    .forEach((pic) => pic.setAttribute("hidden", true));
+    // mainContainer
+    // .querySelectorAll('picture')
+    // .forEach((pic) => pic.setAttribute("hidden", true));
 
-    mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
+    // mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
 
-    console.log('picture')
-}
+    // console.log(targetImage)
