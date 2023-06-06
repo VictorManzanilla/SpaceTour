@@ -674,7 +674,6 @@ using text-align: left; will not change it */
   }
   .grid-container--destination > picture,
   .grid-container--crew > picture {
-    grid-area: image;
     max-width: 90%;
   }
 
@@ -704,9 +703,7 @@ but if the screen is small then it will choose the 6viewport width */
 }
 
 
-[role="tab"]:focus {
-  color: blue;
-}
+
 
 
 /******************** people pages css *************************************/
