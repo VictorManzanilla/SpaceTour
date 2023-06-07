@@ -13,7 +13,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="./css/styles.css">
 
-  <script src="index.js" defer></script>
+  <script src="nav.js" defer></script>
+  <script src="tabs.js" defer></script>
+
 
 
   <title>🪐Space tourism website</title>
@@ -46,15 +48,15 @@
 
     <h1 class="numbered-title"><span aria-hidden="true">02</span>Meet your crew</h1>
             <!-- the sr-only will make the title of the crew invisible and tell ppl what they are -->
-        <div class="dot-indicators flex">
-          <button aria-selected="true"><span class="sr-only">The commander</span></button>
-          <button aria-selected="false"><span class="sr-only">The mission specialist</span></button>
-          <button aria-selected="false"><span class="sr-only">The pilot</span></button>
-          <button aria-selected="false"><span class="sr-only">The crew engineer</span></button>
+        <div class="dot-indicators flex" role="tablist" aria-label="crew member list">
+          <button aria-selected="true" role="tab" aria-controls="commander-tab" tabindex="0" data-image="commander-image"><span class="sr-only">The commander</span></button>
+          <button aria-selected="false" role="tab" aria-controls="specialist-tab" tabindex="-1" data-image="specialist-image"><span class="sr-only">The mission specialist</span></button>
+          <button aria-selected="false" role="tab" aria-controls="pilot-tab" tabindex="-1" data-image="pilot-image"><span class="sr-only">The pilot</span></button>
+          <button aria-selected="false" role="tab" aria-controls="engineer-tab" tabindex="-1" data-image="engineer-image"><span class="sr-only">The crew engineer</span></button>
         </div>
       
         <!--------------------------------- commander ---------------------------------------------------------------->
-      <article class="crew-info flow">
+      <article  class="crew-info flow" tabindex="0" id="commander-tab" role="tabpanel">
         <header class="flow flow--space-small">
         <h2 class="fs-500 uppercase ff-serif">Commander</h2>
          <h1 class="fs-700 uppercase ff-serif">Douglas Hurley</h1> 
@@ -66,7 +68,7 @@
       </article>
         <!--------------------------------- mission specialist ---------------------------------------------------------------->
 
-      <article class="crew-info flow">
+      <article hidden class="crew-info flow" tabindex="0" id="specialist-tab" role="tabpanel">
         <header class="flow flow--space-small">
         <h2 class="fs-500 uppercase ff-serif">Mission Specialist</h2>
          <h1 class="fs-700 uppercase ff-serif">Mark Shuttleworth</h1> 
@@ -79,7 +81,7 @@
 
         <!--------------------------------- pilot ---------------------------------------------------------------->
 
-      <article class="crew-info flow">
+      <article hidden class="crew-info flow" tabindex="0" id="pilot-tab" role="tabpanel">
         <header class="flow flow--space-small">
         <h2 class="fs-500 uppercase ff-serif">Pilot</h2>
          <h1 class="fs-700 uppercase ff-serif">Victor Glover</h1> 
@@ -92,7 +94,7 @@
       </article>
 
               <!--------------------------------- engineer ---------------------------------------------------------------->
-      <article class="crew-info flow">
+      <article hidden class="crew-info flow" tabindex="0" id="engineer-tab" role="tabpanel">
         <header class="flow flow--space-small">
         <h2 class="fs-500 uppercase ff-serif">Flight Engineer</h2>
          <h1 class="fs-700 uppercase ff-serif">Anousheh Ansari</h1> 
@@ -103,26 +105,24 @@
         </p>
       </article>
 
-      <picture>
+      <picture  id="commander-image">
         <source srcset="./assets/crew/image-douglas-hurley.webp" type="image/webp">
           <!-- the image is by itself because depending on the screen, the image is positioned differently -->
           <img  src="./assets/crew/image-douglas-hurley.png" alt="Commander Douglas Hurley">
       </picture>
 
-      <picture>
-        <source srcset="./assets/crew/image-mark-shuttleworth.webp" type="image/webp">
-          <img  src="./assets/crew/image-mark-shuttleworth.png" alt="Mission Specialist mark shuttleworth">
+      <picture  id="specialist-image" >
+        <source srcset="./assets/crew/image-mark-shuttleworth.webp" type="image/webp" >
+          <img  src="./assets/crew/image-mark-shuttleworth.png" alt="Mission Specialist mark shuttleworth" >
       </picture>
 
-      <picture>
+      <picture  id="pilot-image">
         <source srcset="./assets/crew/image-victor-glover.webp" type="image/webp">
-          <!-- the image is by itself because depending on the screen, the image is positioned differently -->
           <img  src="./assets/crew/image-victor-glover.png" alt="Pilot Victor Glover">
       </picture>
 
-      <picture>
+      <picture  id="engineer-image">
         <source srcset="./assets/crew/image-anousheh-ansari.webp" type="image/webp">
-          <!-- the image is by itself because depending on the screen, the image is positioned differently -->
           <img  src="./assets/crew/image-anousheh-ansari.png" alt="Flight Engineer Anousheh Ansari">
       </picture>
   </main>
