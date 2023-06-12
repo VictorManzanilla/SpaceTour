@@ -528,7 +528,7 @@ row-gap to give separation. */
 .grid-container {
   text-align: center;
   display: grid;
-  border: 5px limegreen solid;
+  /* border: 5px limegreen solid; */
   place-items: center;
   padding-inline: 1rem;
   padding-bottom: 4rem;
@@ -702,107 +702,6 @@ but if the screen is small then it will choose the 6viewport width */
   opacity: .3;
 }
 
-
-
-
-
-/******************** people pages css *************************************/
-
-
-
-.subheadline {
-  position: absolute;
-width: 400px;
-height: 34px;
-left: 166.5px;
-top: 212px;
-
-
-}
-
-.people-title {
-  position: absolute;
-width: 320px;
-height: 37px;
-left: 165.5px;
-top: 400px;
-
-font-family: Bellefair;
-font-style: normal;
-font-weight: normal;
-font-size: 32px;
-line-height: 37px;
-/* identical to box height */
-
-text-transform: uppercase;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-opacity: 0.5;
-}
-
-.people-name {
-  position: absolute;
-width: 600px;
-height: 64px;
-left: 165.5px;
-top: 452px;
-
-font-family: Bellefair;
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-line-height: 64px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-}
-
-.people-description {
-  position: absolute;
-width: 444px;
-height: 128px;
-left: 165px;
-top: 543px;
-
-font-family: Barlow;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 32px;
-/* or 178% */
-
-
-color: #D0D6F9;
-}
-
-.footer-oval-block {
-  position: absolute;
-width: 132px;
-height: 15px;
-left: 167px;
-top: 791px;
-
-}
-
-.oval1 {
-  position: absolute;
-width: 15px;
-height: 15px;
-left: 167px;
-top: 791px;
-
-background: #FFFFFF;
-}
-
-.person-picture {
-  position: absolute;
-width: 568.07px;
-height: 0px;
-left: 734.93px;
-top: 140px;
-}
 
 /******************************************* Tech page style *******************************************/
 
