@@ -48,24 +48,26 @@
 
     <picture  id="moon-image">
       <source srcset="./assets/destination/image-moon.webp" type="image/webp" >
-        <img src="./assets/destination/image-moon.png" alt="The moon">
+        <img src="./assets/destination/image-moon.png" alt="The moon" />
     </picture>
 
         <picture hidden id="mars-image">
-          <source srcset="./assets/destination/image-mars.webp" type="image/webp" >
-            <img src="./assets/destination/image-mars.png" alt="planet mars">
+          <source srcset="./assets/destination/image-mars.webp"  >
+            <img src="./assets/destination/image-mars.png" alt="planet mars" />
         </picture> 
 
-        <picture hidden id="europa-image">
+        <picture  hidden id="europa-image">
           <source srcset="./assets/destination/image-europa.webp" type="image/webp" >
-            <img src="./assets/destination/image-europa.png" alt="Europa moon">
+            <img src="./assets/destination/image-europa.png" alt="Europa moon" />
         </picture>
 
-        <picture hidden id="titan-image">
+        <picture hidden  id="titan-image">
           <source srcset="./assets/destination/image-titan.webp" type="image/webp" >
-            <img src="./assets/destination/image-titan.png" alt="titan moon">
+            <img  src="./assets/destination/image-titan.png" alt="titan moon" />
         </picture>
-
+        
+        <!-- style="display: none;" -->
+        <!-- I need to delete picture from the css from the part to make images to work with easier-->
         
         <!-- aria-label is to tell screen readers(sr) what this is -->
        <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
@@ -77,7 +79,7 @@
                          <!-------------- Moon ---------------------->
 
       <article class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
-         <h1 class="fs-800 uppercase ff-serif">Moon</h1> 
+         <h1 class="fs-700 uppercase ff-serif">Moon</h1> 
       
         <p>  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
           regain perspective and come back refreshed. While you’re there, take in some history 
@@ -101,7 +103,7 @@
                   <!-------------- Mars ---------------------->
 
       <article hidden class="destination-info flow" id="mars-tab" tabindex="0" role="tabpanel">
-        <h2 class="fs-800 uppercase ff-serif">Mars</h2> 
+        <h2 class="fs-700 uppercase ff-serif">Mars</h2> 
      
        <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
          the tallest planetary mountain in our solar system. It’s two and a half times 
@@ -123,7 +125,7 @@
                        <!-------------- Europa ---------------------->
 
      <article hidden class="destination-info flow" id="europa-tab" tabindex="0" role="tabpanel">
-      <h2 class="fs-800 uppercase ff-serif">Europa</h2> 
+      <h2 class="fs-700 uppercase ff-serif">Europa</h2> 
    
      <p> The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
           winter lover’s dream. With an icy surface, it’s perfect for a bit of 
@@ -145,7 +147,7 @@
    </article>
                   <!-------------- Titan ---------------------->
    <article hidden class="destination-info flow" id="titan-tab" tabindex="0" role="tabpanel">
-    <h2 class="fs-800 uppercase ff-serif">Titan</h2> 
+    <h2 class="fs-700 uppercase ff-serif">Titan</h2> 
  
    <p>   The only moon known to have a dense atmosphere other than Earth, Titan 
      is a home away from home (just a few hundred degrees colder!). As a 

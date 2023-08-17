@@ -43,18 +43,93 @@ tabList.addEventListener('keydown', (e) => {
 //its set to zero
     tabs[tabFocus].setAttribute("tabindex", 0);
     tabs[tabFocus].focus();
-
 })
 
 function changeTabPanel(e) {
-    const  targetTab = e.target;
+    const targetTab = e.target;
     const targetPanel = targetTab.getAttribute("aria-controls");
     const targetImage = targetTab.getAttribute("data-image");
-
     
     const tabContainer = targetTab.parentNode;
-    const mainContainer = tabContainer.parentNode;
+    const mainContainer = tabContainer.parentNode
+    // const picture = document.getElementById("rock")
+    // console.log(picture)
+    
+    
+    mainContainer
+        .querySelectorAll('article')
+        .forEach((article) => article.setAttribute("hidden", true));
+    
+    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+    
+     mainContainer
+        .querySelectorAll('picture')
+        .forEach((picture) => picture.setAttribute("hidden", true));
 
+        mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
+}
+
+// function changeTabPanel(e) {
+//     const targetTab = e.target;
+//     const targetPanel = targetTab.getAttribute("aria-controls");
+    
+//     const tabContainer = targetTab.parentNode;
+//     const mainContainer = tabContainer.parentNode;
+    
+
+    
+//     mainContainer
+//         .querySelectorAll('[role="tabpanel"]')
+//         .forEach((panel) => panel.setAttribute("hidden", true));
+    
+//     mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+    
+//     mainContainer
+//         .querySelectorAll('[role="pic"]')
+//         .forEach((pic) => pic.setAttribute("hidden", true));
+        
+// }
+
+
+
+
+
+
+
+        
+    // const  targetTab = e.target;
+    // const targetPanel = targetTab.getAttribute("aria-controls");
+    // const targetImage = targetTab.getAttribute("data-image");
+
+    
+    // const tabContainer = targetTab.parentNode;
+    // const mainContainer = tabContainer.parentNode;
+
+    // tabContainer
+    //     .querySelector('[aria-selected="true"]')
+    //     .setAttribute("aria-selected", false);
+        
+    // targetTab.setAttribute("aria-selected", true);
+ 
+    // // we are selecting all articles
+    // // then we loop through them and setting all to be hidden
+    // mainContainer
+    // .querySelectorAll('[role="tabpanel"]')
+    // .forEach((panel) => panel.setAttribute("hidden", true));
+    // // then here we are selecting the one have hidden removed
+    // mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+
+    // mainContainer
+    // .querySelectorAll('img')
+    // .forEach((img) => img.setAttribute("hidden", true));
+    
+
+    // mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
+
+    // console.log(targetImage, 'HEREEEEEEEEEEEEEEEEEE')
+
+
+////////////////////////AFTER REFRACTORING/////////////////////////
 //     tabContainer
 //     .querySelector('[aria-selected="true"]')
 //     .setAttribute("aria-selected", false);
@@ -77,29 +152,3 @@ function changeTabPanel(e) {
 // function showContent(parent, content) {
 //  parent.querySelector(content).removeAttribute('hidden');
 // }
-
-
-/////////////// BEFORE REFRACTORING       ///////////////////////////////////
-    tabContainer
-        .querySelector('[aria-selected="true"]')
-        .setAttribute("aria-selected", false);
-        
-    targetTab.setAttribute("aria-selected", true);
- 
-    // we are selecting all articles
-    // then we loop through them and setting all to be hidden
-    mainContainer
-    .querySelectorAll('[role="tabpanel"]')
-    .forEach((panel) => panel.setAttribute("hidden", true));
-    // then here we are selecting the one have hidden removed
-    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
-    console.log(mainContainer)
-
-    mainContainer
-    .querySelectorAll('picture')
-    .forEach((pic) => pic.setAttribute("hidden", true));
-
-    mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
-
-    console.log(targetImage)
-}

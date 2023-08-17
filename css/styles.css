@@ -146,8 +146,7 @@ body {
 }
 
 /* make images easier to work with */
-img,
-picture {
+img {
     max-width: 100%;
     display: block;
 }
@@ -296,7 +295,7 @@ at the nav menu to the logo distance*/
 .primary-navigation {
   --gap: clamp(1.5rem, 5vw, 3.5rem);
   --underline-gap: 2rem;
-  background: hsl( var(--clr-white) / 0.05);
+  background: hsl( var(--clr-white) / 0.1);
   backdrop-filter: blur(1rem);
   list-style: none;
   padding: 0;
@@ -673,7 +672,7 @@ using text-align: left; will not change it */
       
   }
   .grid-container--destination > picture,
-  .grid-container--crew > picture {
+  .grid-container--crew > picture{
     max-width: 90%;
   }
 
@@ -701,13 +700,13 @@ but if the screen is small then it will choose the 6viewport width */
 .crew-info h2 {
   opacity: .3;
 }
-
+/* [role="pic"]:focus {
+  color: limegreen;
+} */
 
 /******************************************* Tech page style *******************************************/
 
-.tech-background-image {
-  background-image: url(/Users/baguetteboi/Desktop/travesuras/space-tourism-website-main/space-code/assets/technology/background-technology-desktop.jpg);
-}
+
 
 .number-position {
   position: absolute;
@@ -789,10 +788,5 @@ color: #0B0D17;
     color: #FFFFFF;
 }
 
-.tech-picture {
-  position: absolute;
-  
-  left: 820px;
-  top: 198px;
-} 
+
 
