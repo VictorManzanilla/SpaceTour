@@ -518,7 +518,9 @@ body {
   }
 }
 
-
+.tech {
+  background-image: url(../assets/technology/background-technology-mobile.jpg);
+}
 /******************************* LAYOUT  ***************************/
 
 /* place-items and place-content are different because content would place things together and 
@@ -705,88 +707,6 @@ but if the screen is small then it will choose the 6viewport width */
 } */
 
 /******************************************* Tech page style *******************************************/
-
-
-
-.number-position {
-  position: absolute;
-left: 80px;
-top: 383px;
-}
-
-.oval-numbers {
-
-list-style-type: none;
-
-height: 37px;
-left: 44.38%;
-right: 43.12%;
-top: calc(50% - 37px/2 + 0.5px);
-
-font-family: Bellefair;
-font-style: normal;
-font-weight: normal;
-font-size: 32px;
-line-height: 37px;
-/* identical to box height */
-
-text-align: center;
-letter-spacing: 2px;
-
-color: #0B0D17;
-
-
-}
-
-.oval-shape-numbers {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  margin: 30px 0;
-
-  mix-blend-mode: normal;
-  opacity: 0.25;
-  border: 20px solid #FFFFFF;
-  box-sizing: border-box;
-}
-
-.tech-description {
-  position: absolute;
-  left: 100px;
-}
-
-.tech-title {
-  position: absolute;
-  width: 360px;
-  height: 37px;
-  left: 165.5px;
-  top: 400px;
-  font-family: Bellefair;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 37px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  mix-blend-mode: normal;
-  opacity: 0.5;
-}
-
-.tech-sub-title {
-    position: absolute;
-    width: 450px;
-    height: 64px;
-    left: 165.5px;
-    top: 452px;
-    font-family: Bellefair;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 64px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
 
 
 
