@@ -319,7 +319,7 @@ at the nav menu to the logo distance*/
 /* This is for browser support and make sure you add property + value */
 @supports (backdrop-filter: blur(1rem)) {
   .primary-navigation {
-      background: hsl( var(--clr-white) / 0..05);
+      background: hsl( var(--clr-white) / 0.05);
       backdrop-filter: blur(1.5rem);
   }
 }
@@ -463,6 +463,27 @@ nav {
   background-color: hsl( var(--clr-white) / 1); 
 }
 
+.circle-indicators > * {
+  cursor: pointer;
+  border-style: solid;
+  border-color: hsl( var(--clr-light) / .25);
+  border-radius: 50%;
+  padding: 2em;
+  background-color: transparent;
+}
+
+.circle-indicators > *:hover,
+.circle-indicators > *:focus { 
+  background-color: hsl( var(--clr-white) / 1);
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl( var(--clr-white) / 1); 
+}
+.numbers {
+  color:hsl( var(--clr-dark) / .95);
+  
+}
 /*********************** Background image setup ******************/
 body {
   background-size: cover;
@@ -719,5 +740,12 @@ but if the screen is small then it will choose the 6viewport width */
 
 /******************************************* Tech page style *******************************************/
 
-
+.grid-container--tech {
+  --flow-space: 2rem;
+  grid-template-areas: 
+      'title'
+      'image'
+      'circle'
+      'content';
+}
 
