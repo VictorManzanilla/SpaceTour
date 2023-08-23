@@ -521,6 +521,17 @@ body {
 .tech {
   background-image: url(../assets/technology/background-technology-mobile.jpg);
 }
+
+@media (min-width: 35rem) {
+  .tech {
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
+  }
+  @media (min-width: 45rem) {
+    .tech {
+      background-image: url(../assets/technology/background-technology-desktop.jpg);
+    }
+  }
+}
 /******************************* LAYOUT  ***************************/
 
 /* place-items and place-content are different because content would place things together and 
