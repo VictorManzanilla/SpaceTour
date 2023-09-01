@@ -477,13 +477,12 @@ nav {
   background-color: hsl( var(--clr-white) / 1);
 }
 
-.dot-indicators > [aria-selected="true"] {
+.circle-indicators > [aria-selected="true"] {
+  color: hsl( var(--clr-dark) / 1);
   background-color: hsl( var(--clr-white) / 1); 
-}
-.numbers {
-  color:hsl( var(--clr-dark) / .95);
   
 }
+
 /*********************** Background image setup ******************/
 body {
   background-size: cover;
@@ -561,7 +560,7 @@ row-gap to give separation. */
 .grid-container {
   text-align: center;
   display: grid;
-  /* border: 5px limegreen solid; */
+  border: 5px limegreen solid;
   place-items: center;
   padding-inline: 1rem;
   padding-bottom: 4rem;
@@ -672,6 +671,32 @@ using text-align: left; will not change it */
         'image';
   }
 }
+
+.grid-container--tech {
+  --flow-space: 2rem;
+  grid-template-areas: 
+      'title'
+      'image'
+      'circle'
+      'content';
+}
+
+.grid-container--tech > picture {
+  grid-area: image;
+  max-width: 100%;
+  outline: 1px solid red ;
+
+}
+
+.grid-container--tech > .circle-indicators {
+  grid-area: circle;
+  
+}
+
+.grid-container--tech > .tech-info {
+  grid-area: content;
+ 
+}
 /* large size screen, media query */
 @media (min-width: 45em) {
   .grid-container {
@@ -729,6 +754,17 @@ but if the screen is small then it will choose the 6viewport width */
   .grid-container--crew > .dot-indicators {
     justify-self: start;
   }
+
+  .grid-container--tech {
+    grid-template-areas: 
+        '. title title title .'
+        '. circle content  image.'
+        
+     
+  }
+  .grid-container--tech > .circle-indicators {
+    justify-self: start;
+  }
 }
 /* color: hsl( var(--clr-white) / .5) this works too */
 .crew-info h2 {
@@ -740,12 +776,5 @@ but if the screen is small then it will choose the 6viewport width */
 
 /******************************************* Tech page style *******************************************/
 
-.grid-container--tech {
-  --flow-space: 2rem;
-  grid-template-areas: 
-      'title'
-      'image'
-      'circle'
-      'content';
-}
+
 
