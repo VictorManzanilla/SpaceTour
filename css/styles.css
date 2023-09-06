@@ -560,7 +560,7 @@ row-gap to give separation. */
 .grid-container {
   text-align: center;
   display: grid;
-  border: 5px limegreen solid;
+  /* border: 5px limegreen solid; */
   place-items: center;
   padding-inline: 1rem;
   padding-bottom: 4rem;
@@ -672,6 +672,8 @@ using text-align: left; will not change it */
   }
 }
 
+/******************************************* Tech layout *******************************************/
+
 .grid-container--tech {
   --flow-space: 2rem;
   grid-template-areas: 
@@ -684,7 +686,7 @@ using text-align: left; will not change it */
 .grid-container--tech > picture {
   grid-area: image;
   max-width: 100%;
-  outline: 1px solid red ;
+  /* outline: 1px solid red ; */
 
 }
 
@@ -697,6 +699,9 @@ using text-align: left; will not change it */
   grid-area: content;
  
 }
+
+
+
 /* large size screen, media query */
 @media (min-width: 45em) {
   .grid-container {
@@ -756,15 +761,22 @@ but if the screen is small then it will choose the 6viewport width */
   }
 
   .grid-container--tech {
+    grid-template-columns: minmax(0rem, auto) repeat(2, minmax(0, 20rem)) minmax(0rem, auto);
+      outline: 1px solid red;
+
     grid-template-areas: 
-        '. title title title .'
-        '. circle content  image.'
-        
-     
+        '. title title  .'
+        '. circle content image'
+        '. circle content image'      
   }
   .grid-container--tech > .circle-indicators {
-    justify-self: start;
+    grid-area: circle;
+    
+    
   }
+  /* .grid-container--tech > .circle-indicators {
+    justify-self: start;
+  } */
 }
 /* color: hsl( var(--clr-white) / .5) this works too */
 .crew-info h2 {
@@ -774,7 +786,6 @@ but if the screen is small then it will choose the 6viewport width */
   color: limegreen;
 } */
 
-/******************************************* Tech page style *******************************************/
 
 
 
