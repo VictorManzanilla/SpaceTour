@@ -756,29 +756,31 @@ but if the screen is small then it will choose the 6viewport width */
         '. dots image .';
      
   }
+  .grid-container--tech > picture {
+  grid-area: image;
+  
+
+
+}
   .grid-container--crew > .dot-indicators {
     justify-self: start;
   }
 
   .grid-container--tech {
-    grid-template-columns: minmax(0rem, auto) repeat(2, minmax(0, 20rem)) minmax(0rem, auto);
-      outline: 1px solid red;
+    justify-items: start;
+    align-content: start;
 
     grid-template-areas: 
         '. title title  .'
-        '. circle content image'
-        '. circle content image'      
+        'circle content image .'
+        'circle content image .'      
   }
   .grid-container--tech > .circle-indicators {
     grid-area: circle;
-    
+    flex-direction: column;
     
   }
-  /* .grid-container--tech > .circle-indicators {
-    justify-self: start;
-  } */
-}
-/* color: hsl( var(--clr-white) / .5) this works too */
+  
 .crew-info h2 {
   opacity: .3;
 }
@@ -787,5 +789,5 @@ but if the screen is small then it will choose the 6viewport width */
 } */
 
 
-
+}
 
